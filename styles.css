@@ -1,3 +1,10 @@
+section {
+    scroll-margin-top: 150px;
+}
+
+#home {
+    scroll-margin-top: 0;
+}
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -63,7 +70,8 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: #2563eb;
 }
 
@@ -83,12 +91,13 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding-top: 80px;
+    box-sizing: border-box;
 }
 
 .hero-container {
@@ -104,6 +113,7 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     line-height: 1.2;
     animation: fadeInUp 1s ease-out;
