@@ -228,6 +228,16 @@ body {
     transform: translateY(-2px);
 }
 
+/* Special styling for ORCID icon */
+.social-link[href*="orcid.org"] {
+    background: rgba(166, 206, 57, 0.2);
+}
+
+.social-link[href*="orcid.org"]:hover {
+    background: #A6CE39;
+    color: white;
+}
+
 .profile-image {
     display: flex;
     justify-content: center;
@@ -307,6 +317,36 @@ section {
 .stat-label {
     font-weight: 500;
     color: #666;
+}
+
+/* Professional IDs (ORCID) */
+.professional-ids {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.orcid-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #A6CE39;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(166, 206, 57, 0.1);
+}
+
+.orcid-link:hover {
+    color: #8BB82D;
+    background: rgba(166, 206, 57, 0.2);
+    transform: translateX(5px);
+}
+
+.orcid-link i {
+    font-size: 1.3rem;
 }
 
 /* Skills Section */
