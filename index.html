@@ -1,498 +1,758 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Amit Rangari - DevOps Engineer & Software Architect</title>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8QXYPZYMB"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amit Rangari - DevOps Engineer & Software Architect with 20+ years of experience in cloud architecture, performance engineering, and AI/ML">
+    <meta name="keywords" content="DevOps, Cloud Architecture, AWS, Software Architect, Performance Engineering, AI/ML">
+    <meta name="author" content="Amit Rangari">
 
-            gtag('config', 'G-H8QXYPZYMB');
-        </script>
-        <link rel="icon" type="image/jpeg" href="./images/photo.jpg">
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Amit Rangari | DevOps Engineer & Software Architect</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="images/photo.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8QXYPZYMB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H8QXYPZYMB');
+    </script>
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="./images/photo.jpg" alt="Amit Rangari" style="width:32px;height:32px;border-radius:50%;vertical-align:middle;margin-right:8px;">
-                <a href="#home" style="vertical-align:middle;">Amit Rangari</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#industries" class="nav-link">Industries</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#achievements" class="nav-link">Achievements</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#blog" class="nav-link">Blog</a>
-                </li>
+            <a href="#home" class="nav-logo">
+                <img src="images/photo.jpg" alt="Amit Rangari" class="logo-img">
+                <span class="logo-text">Amit<span class="logo-accent">Rangari</span></span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="files/AmitRangari.pdf" class="nav-link nav-cta" download>Resume</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Amit Rangari</span></h1>
-                <p class="hero-subtitle">DevOps Engineer & Software Architect</p>
-                <p class="hero-description">
-                    Dynamic IT professional with 20+ years of proven excellence in software development, application architecture, 
-                    and DevOps. Renowned for spearheading complex, high-stakes projects that deliver transformative outcomes, 
-                    streamline performance, and inspire innovation in enterprise settings.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#about" class="btn btn-primary">Learn More</a>
-                    <a href="./files/AmitRangari.pdf" class="btn btn-secondary" download>Download Resume</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/amitrangari" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/amitrangari" target="_blank" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://orcid.org/0009-0009-9419-1015" target="_blank" class="social-link" aria-label="ORCID">
-                        <i class="fab fa-orcid"></i>
-                    </a>
-                    <a href="mailto:amitrangari@gmail.com" class="social-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-code"></i>
+                <span>Available for Consulting</span>
             </div>
-            <div class="hero-image">
-                <div class="profile-image">
-                    <img src="./images/photo.jpg" alt="Amit Rangari">
-                </div>
+
+            <h1 class="hero-title">
+                <span class="title-line">Transforming Ideas into</span>
+                <span class="title-line gradient-text">Scalable Solutions</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                DevOps Engineer & Cloud Architect with 20+ years crafting high-performance
+                systems for Fortune 500 companies
+            </p>
+
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Let's Connect</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <span>Explore My Work</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
+
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/amitrangari" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/amitrangari" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://orcid.org/0009-0009-9419-1015" target="_blank" class="social-link" aria-label="ORCID">
+                    <i class="fab fa-orcid"></i>
+                </a>
+                <a href="mailto:amit.rangari@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section class="section about-section" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Dynamic and accomplished IT professional with 20+ years of proven excellence in software development, 
-                        application architecture, and DevOps. I specialize in spearheading complex, high-stakes projects 
-                        that deliver transformative outcomes, streamline performance, and inspire innovation in enterprise settings.
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-image-bg"></div>
+                    <img src="images/photo.jpg" alt="Amit Rangari" class="about-image">
+                    <div class="about-stats-card">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="20">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="150">0</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="section-badge">
+                        <i class="fas fa-user"></i>
+                        <span>About Me</span>
+                    </div>
+
+                    <h2 class="section-title">
+                        Building the Future of <span class="gradient-text">Cloud Infrastructure</span>
+                    </h2>
+
+                    <p class="about-text">
+                        I'm a seasoned DevOps Engineer and Software Architect currently leading performance
+                        engineering initiatives at <strong>JPMorgan Chase & Co.</strong> With over two decades
+                        of experience, I've architected and delivered mission-critical systems across 12+ industry
+                        sectors for Fortune 500 companies.
                     </p>
-                    <p>
-                        My expertise spans leadership of large-scale programs, establishing Software Development Life Cycles (SDLC), 
-                        designing entire platforms from the ground up, and extensive DevOps operations. I have a passion for AI and ML, 
-                        dedicated to harnessing cutting-edge technologies to design practical, scalable solutions that solve 
-                        real-world challenges and propel organizations forward.
+
+                    <p class="about-text">
+                        My expertise spans cloud architecture (AWS, GCP), containerization (Docker, Kubernetes),
+                        CI/CD automation, and performance optimization. I'm passionate about leveraging AI/ML
+                        technologies to solve complex engineering challenges and have published research on
+                        healthcare AI systems with IEEE.
                     </p>
-                    <p>
-                        Currently serving as a DevOps Engineer at JPMorgan Chase, I've worked with industry leaders across 
-                        telecommunications, banking & payments, media & entertainment, pharmaceuticals, and more. My focus is on 
-                        automation, infrastructure as code, containerization, and delivering robust, maintainable solutions.
-                    </p>
-                    <div class="professional-ids">
-                        <a href="https://orcid.org/0009-0009-9419-1015" target="_blank" class="orcid-link">
-                            <i class="fab fa-orcid"></i> ORCID: 0009-0009-9419-1015
+
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <strong>AWS Certified</strong>
+                                <span>Cloud Practitioner</span>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>MS Computer Science</strong>
+                                <span>Manipal University</span>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <strong>AI/ML Certified</strong>
+                                <span>MIT IDSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-actions">
+                        <a href="files/AmitRangari.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="https://orcid.org/0009-0009-9419-1015" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-orcid"></i>
+                            <span>View ORCID Profile</span>
                         </a>
                     </div>
-                    <a href="./files/AmitRangari.pdf" class="btn btn-outline" download>
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <div class="stat-number">20+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">150+</div>
-                        <div class="stat-label">Projects Delivered</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">12+</div>
-                        <div class="stat-label">Industry Sectors</div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- Expertise Section -->
+    <section class="section expertise-section" id="expertise">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-code"></i>
+                    <span>Expertise</span>
+                </div>
+                <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+                <p class="section-subtitle">
+                    A comprehensive toolkit honed through two decades of solving complex engineering challenges
+                </p>
+            </div>
+
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="all">All Skills</button>
+                <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+                <button class="filter-btn" data-filter="programming">Programming</button>
+                <button class="filter-btn" data-filter="ai">AI & Data</button>
+            </div>
+
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">JavaEE</span>
-                        <span class="skill-item">C#</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">SQL</span>
+                <!-- Cloud & DevOps -->
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-icon">
+                        <i class="fab fa-aws"></i>
                     </div>
-                </div>
-                <div class="skill-category">
                     <h3>Cloud Platforms</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">Google Cloud Platform</span>
-                        <span class="skill-item">Microservices</span>
-                        <span class="skill-item">Cloud Architecture</span>
-                        <span class="skill-item">Service-Oriented Architecture</span>
-                        <span class="skill-item">Enterprise Integration</span>
+                    <div class="skill-tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">GCP</span>
+                        <span class="tag">Cloud Architecture</span>
+                        <span class="tag">Microservices</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>DevOps & Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Kubernetes</span>
-                        <span class="skill-item">Jenkins</span>
-                        <span class="skill-item">Ansible</span>
-                        <span class="skill-item">Terraform</span>
-                        <span class="skill-item">CI/CD</span>
-                        <span class="skill-item">Infrastructure as Code</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Methodologies & AI/ML</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Agile</span>
-                        <span class="skill-item">Test-Driven Development</span>
-                        <span class="skill-item">Behavior-Driven Development</span>
-                        <span class="skill-item">SDLC</span>
-                        <span class="skill-item">TensorFlow</span>
-                        <span class="skill-item">Machine Learning</span>
-                        <span class="skill-item">Artificial Intelligence</span>
-                        <span class="skill-item">Prompt Engineering</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-icon">
+                        <i class="fab fa-docker"></i>
                     </div>
-                    <div class="education-content">
-                        <h3>Master of Science - Computer Science</h3>
-                        <h4>Manipal University, Pune</h4>
-                        <p class="education-year">October 2012</p>
-                        <p>Advanced studies in Computer Science with focus on software engineering, algorithms, and system design.</p>
+                    <h3>Containerization</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Container Orchestration</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="92"></div>
                     </div>
                 </div>
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Bachelor of Engineering - Computer Science</h3>
-                        <h4>VNIT, Nagpur, Maharashtra, India</h4>
-                        <p class="education-year">May 1997</p>
-                        <p>Comprehensive foundation in Computer Science and Engineering principles, software development, and system architecture.</p>
-                    </div>
-                </div>
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Professional Certifications</h3>
-                        <h4>Cloud Computing & Data Science</h4>
-                        <ul>
-                            <li><a href="https://www.credly.com/badges/40909555-7f51-4e91-9a19-0875ffb09448/linked_in_profile" target="_blank" style="color: #2563eb; text-decoration: none;">AWS Certified Cloud Practitioner</a></li>
-                            <li><a href="https://www.mygreatlearning.com/certificate/DQGLNROG" target="_blank" style="color: #2563eb; text-decoration: none;">Data Science and Machine Learning: Making Data-Driven Decisions by MIT IDSS</a></li>
-                            <li><a href="./images/promptEnggCert.png" target="_blank" style="color: #2563eb; text-decoration: none;">AI Prompt Engineering Certification</a></li>
-                            <li><a href="./files/Certficate of Presentation - Amit.pdf" target="_blank" style="color: #2563eb; text-decoration: none;">IEEE Certificate of Presentation - Integrating AI and Context Aware Modeling to Improve Patient Centric Healthcare System</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">March 2025 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Performance Test Lead</h3>
-                        <h4>JPMorgan Chase & Co., Atlanta, GA</h4>
-                        <p>
-                            Leading performance testing initiatives for the largest debit platform in North America, 
-                            ensuring system reliability and scalability under high transaction volumes.
-                        </p>
-                        <ul>
-                            <li>Leading performance testing strategy and execution for critical payment systems</li>
-                            <li>Designing and implementing comprehensive performance testing frameworks</li>
-                            <li>Collaborating with development teams to optimize system performance</li>
-                            <li>Establishing performance benchmarks and monitoring protocols</li>
-                        </ul>
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>CI/CD & Automation</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">GitLab CI</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Ansible</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">April 2023 - February 2025</div>
-                    <div class="timeline-content">
-                        <h3>DevOps Engineer</h3>
-                        <h4>JPMorgan Chase & Co., Atlanta, GA</h4>
-                        <p>
-                            Leading DevOps operations for the largest debit platform in North America, 
-                            focusing on automation, compliance, and performance optimization.
-                        </p>
-                        <ul>
-                            <li>Successfully established TrueCD compliance for DEBIT services by enhancing CI pipelines</li>
-                            <li>Streamlined microservice image sizes, resulting in improved deployment performance</li>
-                            <li>Defined and standardized Gradle build patterns for DEBIT services</li>
-                            <li>Mentored teams across various lines of business, driving TrueCD compliance adoption</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">May 2022 - March 2023</div>
-                    <div class="timeline-content">
-                        <h3>Associate Director of IT</h3>
-                        <h4>Virtusa, India and USA</h4>
-                        <p>
-                            Led strategic IT initiatives focusing on pipeline optimization and data center modernization 
-                            for enterprise clients across multiple geographic regions.
-                        </p>
-                        <ul>
-                            <li>Achieved 70% reduction in build and deployment times through advanced DevOps practices</li>
-                            <li>Developed robust data center migration strategy with minimal downtime</li>
-                            <li>Implemented automation solutions ensuring seamless transitions and enhanced reliability</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">October 2021 - April 2022</div>
-                    <div class="timeline-content">
-                        <h3>Principal Architect - Cloud Infra Services</h3>
-                        <h4>LTI (Larsen & Toubro Infotech)</h4>
-                        <p>
-                            Architected comprehensive Full Stack Digital Operations (FSDO) offerings and provided 
-                            strategic advisory services for platform modernization initiatives.
-                        </p>
-                        <ul>
-                            <li>Designed Full Stack Digital Operations framework demonstrating complete DevOps capabilities</li>
-                            <li>Provided strategic advisory for infrastructure and service modernization</li>
-                            <li>Guided insurance clients through platform modernization journeys</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">May 2014 - October 2021</div>
-                    <div class="timeline-content">
-                        <h3>Senior Architect</h3>
-                        <h4>Cognizant, India, USA - Multiple Clients</h4>
-                        <p>
-                            Led DevOps standardization and cloud migration initiatives for Fortune 500 clients 
-                            across telecommunications, pharmaceuticals, and enterprise services sectors.
-                        </p>
-                        <ul>
-                            <li>Designed hybrid cloud migration strategy for leading European pharmaceutical company</li>
-                            <li>Developed comprehensive DevOps metrics and reporting frameworks</li>
-                            <li>Successfully containerized 100% of ADP's HRMS and payroll services</li>
-                            <li>Conducted multiple DevOps assessments and SDLC optimization strategies</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">December 2008 - April 2014</div>
-                    <div class="timeline-content">
-                        <h3>Advisory IT Architect</h3>
-                        <h4>IBM, Australia, India, USA</h4>
-                        <p>
-                            Provided application architecture and integration solutions for telecommunications 
-                            and automotive clients across multiple international markets.
-                        </p>
-                        <ul>
-                            <li>Led architectural support for Telstra's registration and enrollment platform</li>
-                            <li>Served as Application Architect for regulatory applications at Idea Cellular</li>
-                            <li>Designed integration architecture for automotive entertainment systems</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Industry Experience Section -->
-    <section id="industries" class="industries">
-        <div class="container">
-            <h2 class="section-title">Industry Experience & Key Clients</h2>
-            <p class="section-subtitle">Extensive experience across diverse industry sectors and Fortune 500 companies</p>
-            <div class="industries-grid">
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-phone-alt"></i>
+                <!-- Programming -->
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
                     </div>
-                    <h3>Telecommunications</h3>
-                    <p>Qwest, BT, Cox Communications, Idea Cellular, Telstra</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-university"></i>
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">C#</span>
                     </div>
-                    <h3>Banking & Payments</h3>
-                    <p>PayPal, BNY Mellon, JPMorgan Chase & Co.</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-pills"></i>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
                     </div>
-                    <h3>Pharmaceuticals</h3>
-                    <p>Sanofi - European market operations</p>
                 </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Media & Entertainment</h3>
-                    <p>Shutterstock, Basik, Sprint/Chrysler, eSports platforms</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3>Payroll Services</h3>
-                    <p>ADP - HRMS and payroll containerization</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Healthcare & Others</h3>
-                    <p>CareFirst, JB Hunt (Logistics), Lokmat (Publishing), Sensis (Marketing)</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements & Certifications</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-award"></i>
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
                     </div>
-                    <h3>AWS Certified Cloud Practitioner</h3>
-                    <p>Validated expertise in cloud computing and AWS platform fundamentals</p>
-                    <span class="achievement-year">Current</span>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
+                    <h3>Architecture & Integration</h3>
+                    <div class="skill-tags">
+                        <span class="tag">SOA</span>
+                        <span class="tag">EAI</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Event-Driven</span>
                     </div>
-                    <h3>70% Performance Improvement</h3>
-                    <p>Achieved significant reduction in build and deployment times through DevOps optimization</p>
-                    <span class="achievement-year">2022-2023</span>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-containers"></i>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="93"></div>
                     </div>
-                    <h3>100% Containerization Success</h3>
-                    <p>Successfully containerized all HRMS and payroll services for ADP</p>
-                    <span class="achievement-year">2021</span>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Multi-Continental Leadership</h3>
-                    <p>Led teams and projects across Australia, India, USA, and Canada</p>
-                    <span class="achievement-year">2008-Present</span>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>TrueCD Compliance Implementation</h3>
-                    <p>Successfully established compliance for DEBIT services at JPMorgan Chase</p>
-                    <span class="achievement-year">2023-Present</span>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
+
+                <!-- AI & Data -->
+                <div class="skill-card" data-category="ai">
+                    <div class="skill-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>AI/ML Technology Adoption</h3>
-                    <p>Learning and implementing TensorFlow for cutting-edge AI solutions</p>
-                    <span class="achievement-year">2023-Present</span>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-file-alt"></i>
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">ML Models</span>
+                        <span class="tag">Prompt Engineering</span>
                     </div>
-                    <h3>IEEE Research Publication</h3>
-                    <p>Published research paper on "Integrating AI and Context Aware Modeling to Improve Patient Centric Healthcare System"</p>
-                    <span class="achievement-year">2025</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Performance Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Load Testing</span>
+                        <span class="tag">Optimization</span>
+                        <span class="tag">Monitoring</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="96"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Methodologies</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Agile</span>
+                        <span class="tag">TDD</span>
+                        <span class="tag">BDD</span>
+                        <span class="tag">SDLC</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="91"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">Latest Blog Posts</h2>
-            <p class="section-subtitle">Sharing insights and knowledge about technology and development</p>
-            <div style="text-align: center; padding: 4rem 0;">
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    <i class="fas fa-tools" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.8;"></i>
-                    <h3 style="font-size: 2rem; margin-bottom: 1rem; font-weight: 600;">Work in Progress</h3>
-                    <p style="font-size: 1.1rem; opacity: 0.9; line-height: 1.6;">
-                        Exciting content is being crafted! I'm working on sharing valuable insights about DevOps, AI, performance engineering, and technology trends. 
-                        <br><br>
-                        Stay tuned for in-depth articles and tutorials coming soon.
-                    </p>
-                    <div style="margin-top: 2rem;">
-                        <i class="fas fa-heart" style="color: #fbbf24; margin: 0 0.5rem;"></i>
-                        <span style="font-size: 0.9rem; opacity: 0.8;">Thank you for your patience</span>
-                        <i class="fas fa-heart" style="color: #fbbf24; margin: 0 0.5rem;"></i>
+    <!-- Journey Section (Timeline) -->
+    <section class="section journey-section" id="journey">
+        <div class="container-wide">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Career Journey</span>
+                </div>
+                <h2 class="section-title">Two Decades of <span class="gradient-text">Innovation</span></h2>
+                <p class="section-subtitle">
+                    From IBM to JPMorgan Chase - A journey through enterprise architecture and cloud transformation
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2025 - Present</div>
+                        <h3>Performance Test Lead</h3>
+                        <h4>JPMorgan Chase & Co.</h4>
+                        <p>Leading performance engineering initiatives for mission-critical banking systems, ensuring scalability and reliability across global operations.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Performance Testing</span>
+                            <span class="tag">Banking Systems</span>
+                            <span class="tag">Leadership</span>
+                        </div>
                     </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">April 2023 - February 2025</div>
+                        <h3>DevOps Engineer</h3>
+                        <h4>JPMorgan Chase & Co.</h4>
+                        <p>Architected and implemented CI/CD pipelines, containerization strategies, and cloud infrastructure for enterprise banking applications.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">DevOps</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2022 - March 2023</div>
+                        <h3>Associate Director IT</h3>
+                        <h4>Virtusa</h4>
+                        <p>Led enterprise IT initiatives and cloud migration projects, managing cross-functional teams and delivering strategic technology solutions.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Cloud Migration</span>
+                            <span class="tag">Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 2021 - April 2022</div>
+                        <h3>Principal Architect - Cloud Infrastructure</h3>
+                        <h4>LTI (Larsen & Toubro Infotech)</h4>
+                        <p>Designed and implemented cloud-native architectures for enterprise clients, focusing on scalability, security, and cost optimization.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Cloud Architecture</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2014 - October 2021</div>
+                        <h3>Senior Architect</h3>
+                        <h4>Cognizant Technology Solutions</h4>
+                        <p>Architected enterprise solutions across multiple domains including telecommunications, finance, and healthcare. Led teams in delivering complex integration and migration projects.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Enterprise Architecture</span>
+                            <span class="tag">Integration</span>
+                            <span class="tag">Multi-domain</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 2008 - April 2014</div>
+                        <h3>Advisory IT Architect</h3>
+                        <h4>IBM</h4>
+                        <p>Provided architectural guidance and technical leadership for large-scale enterprise transformation projects. Specialized in SOA and integration patterns.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">IBM</span>
+                            <span class="tag">SOA</span>
+                            <span class="tag">Advisory</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="education-timeline">
+                <h3 class="education-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education & Certifications
+                </h3>
+
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="edu-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4>Master of Science</h4>
+                        <p class="edu-field">Computer Science</p>
+                        <p class="edu-school">Manipal University</p>
+                        <span class="edu-year">2012</span>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="edu-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4>Bachelor of Engineering</h4>
+                        <p class="edu-field">Computer Science</p>
+                        <p class="edu-school">VNIT Nagpur</p>
+                        <span class="edu-year">1997</span>
+                    </div>
+
+                    <div class="education-card cert-card">
+                        <div class="edu-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h4>AWS Certified</h4>
+                        <p class="edu-field">Cloud Practitioner</p>
+                        <a href="https://www.credly.com/badges/6c6a73f6-38e1-4cef-b01f-e62f0f3c5ed2" target="_blank" class="cert-link">
+                            View Credential <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="education-card cert-card">
+                        <div class="edu-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Data Science & ML</h4>
+                        <p class="edu-field">MIT IDSS</p>
+                        <a href="https://www.credential.net/5fc0c7c8-a3bc-4ae7-af8d-fdc2b318ee46" target="_blank" class="cert-link">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="education-card cert-card">
+                        <div class="edu-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>AI Prompt Engineering</h4>
+                        <p class="edu-field">Certified Professional</p>
+                        <a href="images/promptEnggCert.png" target="_blank" class="cert-link">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="education-card cert-card">
+                        <div class="edu-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>IEEE Publication</h4>
+                        <p class="edu-field">Research Paper Presentation</p>
+                        <a href="files/Certficate of Presentation - Amit.pdf" target="_blank" class="cert-link">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section impact-section" id="impact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-trophy"></i>
+                    <span>Impact</span>
+                </div>
+                <h2 class="section-title">Delivering <span class="gradient-text">Measurable Results</span></h2>
+                <p class="section-subtitle">
+                    Achievements that transformed businesses across Fortune 500 companies
+                </p>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card featured">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="impact-number">70%</div>
+                    <h3>Performance Improvement</h3>
+                    <p>Optimized critical banking systems at JPMorgan Chase, reducing response times by 70% through advanced performance engineering techniques.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="impact-number">100%</div>
+                    <h3>Containerization Success</h3>
+                    <p>Led complete containerization of ADP's payroll systems, achieving seamless deployment across multiple environments.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="impact-number">12+</div>
+                    <h3>Industry Sectors</h3>
+                    <p>Delivered solutions across Banking, Telecom, Healthcare, Media, Pharma, and more - demonstrating versatility and adaptability.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="impact-number">150+</div>
+                    <h3>Projects Delivered</h3>
+                    <p>Successfully architected and delivered over 150 projects for Fortune 500 clients across multiple continents.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>TrueCD Compliance</h3>
+                    <p>Implemented enterprise-wide TrueCD compliance at JPMorgan Chase, ensuring security and regulatory standards across deployment pipelines.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>IEEE Research Publication</h3>
+                    <p>Published research on AI-driven healthcare systems, contributing to the intersection of technology and medical innovation.</p>
+                </div>
+            </div>
+
+            <!-- Industries Served -->
+            <div class="industries-section">
+                <h3 class="industries-title">Industries Served</h3>
+                <div class="industries-grid">
+                    <div class="industry-tag">
+                        <i class="fas fa-university"></i>
+                        Banking & Finance
+                    </div>
+                    <div class="industry-tag">
+                        <i class="fas fa-broadcast-tower"></i>
+                        Telecommunications
+                    </div>
+                    <div class="industry-tag">
+                        <i class="fas fa-heartbeat"></i>
+                        Healthcare
+                    </div>
+                    <div class="industry-tag">
+                        <i class="fas fa-film"></i>
+                        Media & Entertainment
+                    </div>
+                    <div class="industry-tag">
+                        <i class="fas fa-pills"></i>
+                        Pharmaceuticals
+                    </div>
+                    <div class="industry-tag">
+                        <i class="fas fa-money-check-alt"></i>
+                        Payroll Services
+                    </div>
+                </div>
+
+                <div class="clients-marquee">
+                    <div class="marquee-content">
+                        <span>JPMorgan Chase</span>
+                        <span>PayPal</span>
+                        <span>BNY Mellon</span>
+                        <span>IBM</span>
+                        <span>ADP</span>
+                        <span>Sanofi</span>
+                        <span>Shutterstock</span>
+                        <span>BT Group</span>
+                        <span>Cox Communications</span>
+                        <span>Telstra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-badge">
+                        <i class="fas fa-envelope"></i>
+                        <span>Get In Touch</span>
+                    </div>
+
+                    <h2 class="section-title">
+                        Let's Build Something <span class="gradient-text">Amazing</span>
+                    </h2>
+
+                    <p class="contact-text">
+                        Whether you're looking for a technical advisor, cloud architect, or DevOps expert,
+                        I'm always interested in discussing challenging projects and innovative opportunities.
+                    </p>
+
+                    <div class="contact-methods">
+                        <a href="mailto:amit.rangari@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Email</h4>
+                                <p>amit.rangari@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/amitrangari" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>LinkedIn</h4>
+                                <p>Connect with me</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/amitrangari" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>GitHub</h4>
+                                <p>View my code</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-social">
+                        <p>Find me on</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/amitrangari" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/amitrangari" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://orcid.org/0009-0009-9419-1015" target="_blank" class="social-link">
+                                <i class="fab fa-orcid"></i>
+                            </a>
+                            <a href="mailto:amit.rangari@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project Discussion">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -502,28 +762,51 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Amit Rangari. All rights reserved.</p>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #888;">"The site is created using GitHub Copilot in Agent mode using Claude Sonnet 4 using prompts"</p>
+                <div class="footer-brand">
+                    <img src="images/photo.jpg" alt="Amit Rangari" class="footer-logo">
+                    <p class="footer-tagline">Building scalable solutions for tomorrow's challenges</p>
                 </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/amitrangari" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/amitrangari" target="_blank" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://orcid.org/0009-0009-9419-1015" target="_blank" class="social-link" aria-label="ORCID">
-                        <i class="fab fa-orcid"></i>
-                    </a>
-                    <a href="mailto:amitrangari@gmail.com" class="social-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#expertise">Expertise</a></li>
+                            <li><a href="#journey">Journey</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="files/AmitRangari.pdf" download>Resume</a></li>
+                            <li><a href="https://orcid.org/0009-0009-9419-1015" target="_blank">ORCID Profile</a></li>
+                            <li><a href="#impact">Publications</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/amitrangari" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/amitrangari" target="_blank">GitHub</a></li>
+                            <li><a href="mailto:amit.rangari@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Amit Rangari. All rights reserved.</p>
+                <p class="footer-credit">Crafted with passion for innovation</p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
