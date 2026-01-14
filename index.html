@@ -15,7 +15,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -33,6 +33,9 @@
     </script>
 </head>
 <body>
+    <!-- Network Canvas Background -->
+    <canvas id="network-canvas"></canvas>
+
     <!-- Theme Toggle -->
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
@@ -42,60 +45,77 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <img src="images/photo.jpg" alt="Amit Rangari" class="logo-img">
-                <span class="logo-text">Amit<span class="logo-accent">Rangari</span></span>
+                <div class="logo-grid">
+                    <span></span><span></span><span></span>
+                    <span></span><span class="active"></span><span></span>
+                    <span></span><span></span><span></span>
+                </div>
+                <span class="logo-text"><span class="mono">$</span> Amit Rangari</span>
             </a>
 
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
-                <span></span>
             </button>
 
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#expertise" class="nav-link">Expertise</a></li>
-                <li><a href="#journey" class="nav-link">Journey</a></li>
-                <li><a href="#impact" class="nav-link">Impact</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="files/AmitRangari.pdf" class="nav-link nav-cta" download>Resume</a></li>
+                <li><a href="#home" class="nav-link"><span class="link-number">00</span>Home</a></li>
+                <li><a href="#about" class="nav-link"><span class="link-number">01</span>About</a></li>
+                <li><a href="#expertise" class="nav-link"><span class="link-number">02</span>Stack</a></li>
+                <li><a href="#journey" class="nav-link"><span class="link-number">03</span>Journey</a></li>
+                <li><a href="#impact" class="nav-link"><span class="link-number">04</span>Impact</a></li>
+                <li><a href="#contact" class="nav-link"><span class="link-number">05</span>Contact</a></li>
+                <li><a href="files/AmitRangari.pdf" class="nav-cta" download>
+                    <i class="fas fa-download"></i> Resume
+                </a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-        </div>
-
         <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-code"></i>
+            <div class="hero-label">
+                <span class="status-dot"></span>
                 <span>Available for Consulting</span>
             </div>
 
             <h1 class="hero-title">
-                <span class="title-line">Transforming Ideas into</span>
-                <span class="title-line gradient-text">Scalable Solutions</span>
+                <span class="title-line">Architecting</span>
+                <span class="title-line title-highlight">Cloud Infrastructure</span>
+                <span class="title-line">at Scale</span>
             </h1>
 
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-label">ROLE</span>
+                    <span class="meta-value">DevOps Engineer</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">EXPERIENCE</span>
+                    <span class="meta-value">20+ Years</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">LOCATION</span>
+                    <span class="meta-value">JPMorgan Chase</span>
+                </div>
+            </div>
+
             <p class="hero-subtitle">
-                DevOps Engineer & Cloud Architect with 20+ years crafting high-performance
-                systems for Fortune 500 companies
+                Performance Test Lead specializing in cloud architecture, containerization,
+                and CI/CD automation. Delivered 150+ mission-critical systems for Fortune 500 companies
+                across 12+ industry sectors.
             </p>
 
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary">
-                    <span>Let's Connect</span>
+                    <span>Start a Project</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="#about" class="btn btn-secondary">
-                    <span>Explore My Work</span>
-                    <i class="fas fa-chevron-down"></i>
+                    <span>View Work</span>
                 </a>
             </div>
 
@@ -116,64 +136,64 @@
         </div>
 
         <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Scroll to explore</p>
-        </div>
-
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Scroll to explore</p>
+            <span class="scroll-line"></span>
+            <span class="scroll-text">SCROLL</span>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="section about-section" id="about">
         <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About</h2>
+            </div>
+
             <div class="about-grid">
                 <div class="about-image-wrapper">
-                    <div class="about-image-bg"></div>
-                    <img src="images/photo.jpg" alt="Amit Rangari" class="about-image">
-                    <div class="about-stats-card">
-                        <div class="stat-item">
+                    <div class="image-frame">
+                        <img src="images/photo.jpg" alt="Amit Rangari" class="about-image">
+                        <div class="frame-corner tl"></div>
+                        <div class="frame-corner tr"></div>
+                        <div class="frame-corner bl"></div>
+                        <div class="frame-corner br"></div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-box">
                             <div class="stat-number" data-target="20">0</div>
-                            <div class="stat-label">Years Experience</div>
+                            <div class="stat-label">Years</div>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-box">
                             <div class="stat-number" data-target="150">0</div>
-                            <div class="stat-label">Projects Delivered</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number" data-target="12">0</div>
+                            <div class="stat-label">Industries</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="about-content">
-                    <div class="section-badge">
-                        <i class="fas fa-user"></i>
-                        <span>About Me</span>
+                    <h3 class="content-heading">Building the Future of Cloud Infrastructure</h3>
+
+                    <div class="content-text">
+                        <p>
+                            Performance Test Lead at <strong>JPMorgan Chase & Co.</strong>, leading critical
+                            initiatives for global banking systems. Over two decades of experience architecting
+                            and delivering mission-critical infrastructure across Fortune 500 enterprises.
+                        </p>
+
+                        <p>
+                            Specialized in cloud architecture (AWS, GCP), containerization (Docker, Kubernetes),
+                            CI/CD automation, and performance optimization. Passionate about leveraging AI/ML
+                            to solve complex engineering challenges, with published research in IEEE on
+                            healthcare AI systems.
+                        </p>
                     </div>
 
-                    <h2 class="section-title">
-                        Building the Future of <span class="gradient-text">Cloud Infrastructure</span>
-                    </h2>
-
-                    <p class="about-text">
-                        I'm a seasoned DevOps Engineer and Software Architect currently leading performance
-                        engineering initiatives at <strong>JPMorgan Chase & Co.</strong> With over two decades
-                        of experience, I've architected and delivered mission-critical systems across 12+ industry
-                        sectors for Fortune 500 companies.
-                    </p>
-
-                    <p class="about-text">
-                        My expertise spans cloud architecture (AWS, GCP), containerization (Docker, Kubernetes),
-                        CI/CD automation, and performance optimization. I'm passionate about leveraging AI/ML
-                        technologies to solve complex engineering challenges and have published research on
-                        healthcare AI systems with IEEE.
-                    </p>
-
-                    <div class="credentials">
+                    <div class="credentials-grid">
                         <div class="credential-item">
                             <i class="fas fa-award"></i>
                             <div>
@@ -204,7 +224,7 @@
                         </a>
                         <a href="https://orcid.org/0009-0009-9419-1015" target="_blank" class="btn btn-outline">
                             <i class="fab fa-orcid"></i>
-                            <span>View ORCID Profile</span>
+                            <span>ORCID Profile</span>
                         </a>
                     </div>
                 </div>
@@ -214,30 +234,33 @@
 
     <!-- Expertise Section -->
     <section class="section expertise-section" id="expertise">
-        <div class="container">
+        <div class="container-wide">
             <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-code"></i>
-                    <span>Expertise</span>
-                </div>
-                <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
-                <p class="section-subtitle">
-                    A comprehensive toolkit honed through two decades of solving complex engineering challenges
-                </p>
+                <span class="section-number">02</span>
+                <h2 class="section-title">Technical Stack</h2>
             </div>
 
             <div class="skills-filter">
-                <button class="filter-btn active" data-filter="all">All Skills</button>
-                <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
-                <button class="filter-btn" data-filter="programming">Programming</button>
-                <button class="filter-btn" data-filter="ai">AI & Data</button>
+                <button class="filter-btn active" data-filter="all">
+                    <span class="filter-icon">*</span> All
+                </button>
+                <button class="filter-btn" data-filter="cloud">
+                    <span class="filter-icon">☁</span> Cloud
+                </button>
+                <button class="filter-btn" data-filter="programming">
+                    <span class="filter-icon">{ }</span> Code
+                </button>
+                <button class="filter-btn" data-filter="ai">
+                    <span class="filter-icon">◉</span> AI
+                </button>
             </div>
 
             <div class="skills-grid">
                 <!-- Cloud & DevOps -->
                 <div class="skill-card" data-category="cloud">
-                    <div class="skill-icon">
+                    <div class="skill-header">
                         <i class="fab fa-aws"></i>
+                        <span class="skill-percentage" data-progress="95">95%</span>
                     </div>
                     <h3>Cloud Platforms</h3>
                     <div class="skill-tags">
@@ -252,14 +275,15 @@
                 </div>
 
                 <div class="skill-card" data-category="cloud">
-                    <div class="skill-icon">
+                    <div class="skill-header">
                         <i class="fab fa-docker"></i>
+                        <span class="skill-percentage" data-progress="92">92%</span>
                     </div>
                     <h3>Containerization</h3>
                     <div class="skill-tags">
                         <span class="tag">Docker</span>
                         <span class="tag">Kubernetes</span>
-                        <span class="tag">Container Orchestration</span>
+                        <span class="tag">Orchestration</span>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" data-progress="92"></div>
@@ -267,8 +291,9 @@
                 </div>
 
                 <div class="skill-card" data-category="cloud">
-                    <div class="skill-icon">
+                    <div class="skill-header">
                         <i class="fas fa-infinity"></i>
+                        <span class="skill-percentage" data-progress="90">90%</span>
                     </div>
                     <h3>CI/CD & Automation</h3>
                     <div class="skill-tags">
@@ -284,8 +309,9 @@
 
                 <!-- Programming -->
                 <div class="skill-card" data-category="programming">
-                    <div class="skill-icon">
+                    <div class="skill-header">
                         <i class="fab fa-python"></i>
+                        <span class="skill-percentage" data-progress="88">88%</span>
                     </div>
                     <h3>Programming Languages</h3>
                     <div class="skill-tags">
@@ -300,8 +326,9 @@
                 </div>
 
                 <div class="skill-card" data-category="programming">
-                    <div class="skill-icon">
+                    <div class="skill-header">
                         <i class="fas fa-server"></i>
+                        <span class="skill-percentage" data-progress="93">93%</span>
                     </div>
                     <h3>Architecture & Integration</h3>
                     <div class="skill-tags">
@@ -317,8 +344,9 @@
 
                 <!-- AI & Data -->
                 <div class="skill-card" data-category="ai">
-                    <div class="skill-icon">
+                    <div class="skill-header">
                         <i class="fas fa-brain"></i>
+                        <span class="skill-percentage" data-progress="85">85%</span>
                     </div>
                     <h3>AI & Machine Learning</h3>
                     <div class="skill-tags">
@@ -332,8 +360,9 @@
                 </div>
 
                 <div class="skill-card" data-category="cloud">
-                    <div class="skill-icon">
+                    <div class="skill-header">
                         <i class="fas fa-tachometer-alt"></i>
+                        <span class="skill-percentage" data-progress="96">96%</span>
                     </div>
                     <h3>Performance Engineering</h3>
                     <div class="skill-tags">
@@ -347,8 +376,9 @@
                 </div>
 
                 <div class="skill-card" data-category="programming">
-                    <div class="skill-icon">
+                    <div class="skill-header">
                         <i class="fas fa-code-branch"></i>
+                        <span class="skill-percentage" data-progress="91">91%</span>
                     </div>
                     <h3>Methodologies</h3>
                     <div class="skill-tags">
@@ -365,27 +395,20 @@
         </div>
     </section>
 
-    <!-- Journey Section (Timeline) -->
+    <!-- Journey Section -->
     <section class="section journey-section" id="journey">
         <div class="container-wide">
             <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Career Journey</span>
-                </div>
-                <h2 class="section-title">Two Decades of <span class="gradient-text">Innovation</span></h2>
-                <p class="section-subtitle">
-                    From IBM to JPMorgan Chase - A journey through enterprise architecture and cloud transformation
-                </p>
+                <span class="section-number">03</span>
+                <h2 class="section-title">Career Journey</h2>
             </div>
 
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-marker"></div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Mar 2025 - Present</div>
                     <div class="timeline-content">
-                        <div class="timeline-date">March 2025 - Present</div>
+                        <div class="timeline-company">JPMorgan Chase & Co.</div>
                         <h3>Performance Test Lead</h3>
-                        <h4>JPMorgan Chase & Co.</h4>
                         <p>Leading performance engineering initiatives for mission-critical banking systems, ensuring scalability and reliability across global operations.</p>
                         <div class="timeline-tags">
                             <span class="tag">Performance Testing</span>
@@ -395,12 +418,11 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-marker"></div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Apr 2023 - Feb 2025</div>
                     <div class="timeline-content">
-                        <div class="timeline-date">April 2023 - February 2025</div>
+                        <div class="timeline-company">JPMorgan Chase & Co.</div>
                         <h3>DevOps Engineer</h3>
-                        <h4>JPMorgan Chase & Co.</h4>
                         <p>Architected and implemented CI/CD pipelines, containerization strategies, and cloud infrastructure for enterprise banking applications.</p>
                         <div class="timeline-tags">
                             <span class="tag">DevOps</span>
@@ -410,12 +432,11 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-marker"></div>
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2022 - Mar 2023</div>
                     <div class="timeline-content">
-                        <div class="timeline-date">May 2022 - March 2023</div>
+                        <div class="timeline-company">Virtusa</div>
                         <h3>Associate Director IT</h3>
-                        <h4>Virtusa</h4>
                         <p>Led enterprise IT initiatives and cloud migration projects, managing cross-functional teams and delivering strategic technology solutions.</p>
                         <div class="timeline-tags">
                             <span class="tag">Leadership</span>
@@ -425,12 +446,11 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-marker"></div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2021 - Apr 2022</div>
                     <div class="timeline-content">
-                        <div class="timeline-date">October 2021 - April 2022</div>
+                        <div class="timeline-company">LTI (Larsen & Toubro Infotech)</div>
                         <h3>Principal Architect - Cloud Infrastructure</h3>
-                        <h4>LTI (Larsen & Toubro Infotech)</h4>
                         <p>Designed and implemented cloud-native architectures for enterprise clients, focusing on scalability, security, and cost optimization.</p>
                         <div class="timeline-tags">
                             <span class="tag">Cloud Architecture</span>
@@ -440,12 +460,11 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-marker"></div>
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2014 - Oct 2021</div>
                     <div class="timeline-content">
-                        <div class="timeline-date">May 2014 - October 2021</div>
+                        <div class="timeline-company">Cognizant Technology Solutions</div>
                         <h3>Senior Architect</h3>
-                        <h4>Cognizant Technology Solutions</h4>
                         <p>Architected enterprise solutions across multiple domains including telecommunications, finance, and healthcare. Led teams in delivering complex integration and migration projects.</p>
                         <div class="timeline-tags">
                             <span class="tag">Enterprise Architecture</span>
@@ -455,12 +474,11 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-marker"></div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Dec 2008 - Apr 2014</div>
                     <div class="timeline-content">
-                        <div class="timeline-date">December 2008 - April 2014</div>
+                        <div class="timeline-company">IBM</div>
                         <h3>Advisory IT Architect</h3>
-                        <h4>IBM</h4>
                         <p>Provided architectural guidance and technical leadership for large-scale enterprise transformation projects. Specialized in SOA and integration patterns.</p>
                         <div class="timeline-tags">
                             <span class="tag">IBM</span>
@@ -471,78 +489,60 @@
                 </div>
             </div>
 
-            <!-- Education Timeline -->
-            <div class="education-timeline">
-                <h3 class="education-title">
-                    <i class="fas fa-graduation-cap"></i>
-                    Education & Certifications
-                </h3>
+            <!-- Education -->
+            <div class="education-section">
+                <h3 class="education-title">Education & Certifications</h3>
 
                 <div class="education-grid">
                     <div class="education-card">
-                        <div class="edu-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
+                        <div class="edu-icon"><i class="fas fa-university"></i></div>
                         <h4>Master of Science</h4>
-                        <p class="edu-field">Computer Science</p>
-                        <p class="edu-school">Manipal University</p>
+                        <p>Computer Science</p>
+                        <span class="edu-school">Manipal University</span>
                         <span class="edu-year">2012</span>
                     </div>
 
                     <div class="education-card">
-                        <div class="edu-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
+                        <div class="edu-icon"><i class="fas fa-university"></i></div>
                         <h4>Bachelor of Engineering</h4>
-                        <p class="edu-field">Computer Science</p>
-                        <p class="edu-school">VNIT Nagpur</p>
+                        <p>Computer Science</p>
+                        <span class="edu-school">VNIT Nagpur</span>
                         <span class="edu-year">1997</span>
                     </div>
 
                     <div class="education-card cert-card">
-                        <div class="edu-icon">
-                            <i class="fab fa-aws"></i>
-                        </div>
+                        <div class="edu-icon"><i class="fab fa-aws"></i></div>
                         <h4>AWS Certified</h4>
-                        <p class="edu-field">Cloud Practitioner</p>
+                        <p>Cloud Practitioner</p>
                         <a href="https://www.credly.com/badges/6c6a73f6-38e1-4cef-b01f-e62f0f3c5ed2" target="_blank" class="cert-link">
                             View Credential <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
 
                     <div class="education-card cert-card">
-                        <div class="edu-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
+                        <div class="edu-icon"><i class="fas fa-brain"></i></div>
                         <h4>Data Science & ML</h4>
-                        <p class="edu-field">MIT IDSS</p>
+                        <p>MIT IDSS</p>
                         <a href="https://www.credential.net/5fc0c7c8-a3bc-4ae7-af8d-fdc2b318ee46" target="_blank" class="cert-link">
                             View Certificate <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
 
                     <div class="education-card cert-card">
-                        <div class="edu-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
+                        <div class="edu-icon"><i class="fas fa-robot"></i></div>
                         <h4>AI Prompt Engineering</h4>
-                        <p class="edu-field">Certified Professional</p>
+                        <p>Certified Professional</p>
                         <a href="images/promptEnggCert.png" target="_blank" class="cert-link">
                             View Certificate <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
 
                     <div class="education-card cert-card">
-                        <div class="edu-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
+                        <div class="edu-icon"><i class="fas fa-file-alt"></i></div>
                         <h4>IEEE Publication</h4>
-                        <p class="edu-field">Research Paper Presentation</p>
+                        <p>Research Paper</p>
                         <a href="https://ieeexplore.ieee.org/document/11252589" target="_blank" class="cert-link">
                             View Publication <i class="fas fa-external-link-alt"></i>
-                        </a>
-                        <a href="files/Certficate of Presentation - Amit.pdf" target="_blank" class="cert-link">
-                            View Certificate <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
                 </div>
@@ -554,66 +554,48 @@
     <section class="section impact-section" id="impact">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-trophy"></i>
-                    <span>Impact</span>
-                </div>
-                <h2 class="section-title">Delivering <span class="gradient-text">Measurable Results</span></h2>
-                <p class="section-subtitle">
-                    Achievements that transformed businesses across Fortune 500 companies
-                </p>
+                <span class="section-number">04</span>
+                <h2 class="section-title">Impact & Results</h2>
             </div>
 
             <div class="impact-grid">
                 <div class="impact-card featured">
-                    <div class="impact-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
                     <div class="impact-number">70%</div>
                     <h3>Performance Improvement</h3>
                     <p>Optimized critical banking systems at JPMorgan Chase, reducing response times by 70% through advanced performance engineering techniques.</p>
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                 </div>
 
                 <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fab fa-docker"></i>
-                    </div>
                     <div class="impact-number">100%</div>
                     <h3>Containerization Success</h3>
                     <p>Led complete containerization of ADP's payroll systems, achieving seamless deployment across multiple environments.</p>
                 </div>
 
                 <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
                     <div class="impact-number">12+</div>
                     <h3>Industry Sectors</h3>
-                    <p>Delivered solutions across Banking, Telecom, Healthcare, Media, Pharma, and more - demonstrating versatility and adaptability.</p>
+                    <p>Delivered solutions across Banking, Telecom, Healthcare, Media, Pharma, and more.</p>
                 </div>
 
                 <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
                     <div class="impact-number">150+</div>
                     <h3>Projects Delivered</h3>
-                    <p>Successfully architected and delivered over 150 projects for Fortune 500 clients across multiple continents.</p>
+                    <p>Successfully architected and delivered over 150 projects for Fortune 500 clients globally.</p>
                 </div>
 
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-microscope"></i>
-                    </div>
+                <div class="impact-card research">
                     <h3>IEEE Research Publication</h3>
-                    <p>"Integrating Artificial Intelligence and Context-Aware Modeling Protocols for Improved Patient-Centric Healthcare Systems" - Contributing to the intersection of AI and healthcare innovation.</p>
-                    <a href="https://ieeexplore.ieee.org/document/11252589" target="_blank" class="cert-link" style="display: inline-block; margin-top: 12px; color: var(--primary-color); text-decoration: none; font-weight: 500;">
+                    <p>"Integrating Artificial Intelligence and Context-Aware Modeling Protocols for Improved Patient-Centric Healthcare Systems"</p>
+                    <a href="https://ieeexplore.ieee.org/document/11252589" target="_blank" class="research-link">
                         Read Paper <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Industries Served -->
+            <!-- Industries & Clients -->
             <div class="industries-section">
                 <h3 class="industries-title">Industries Served</h3>
                 <div class="industries-grid">
@@ -664,16 +646,14 @@
     <!-- Contact Section -->
     <section class="section contact-section" id="contact">
         <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="section-badge">
-                        <i class="fas fa-envelope"></i>
-                        <span>Get In Touch</span>
-                    </div>
-
-                    <h2 class="section-title">
-                        Let's Build Something <span class="gradient-text">Amazing</span>
-                    </h2>
+                    <h3 class="contact-heading">Start a Conversation</h3>
 
                     <p class="contact-text">
                         Whether you're looking for a technical advisor, cloud architect, or DevOps expert,
@@ -711,35 +691,17 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="contact-social">
-                        <p>Find me on</p>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/amitrangari" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/amitrangari" target="_blank" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://orcid.org/0009-0009-9419-1015" target="_blank" class="social-link">
-                                <i class="fab fa-orcid"></i>
-                            </a>
-                            <a href="mailto:amit.rangari@gmail.com" class="social-link">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contact-form">
                         <div class="form-group">
-                            <label for="name">Your Name</label>
+                            <label for="name">Name</label>
                             <input type="text" id="name" name="name" required placeholder="John Doe">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Your Email</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" required placeholder="john@example.com">
                         </div>
 
@@ -768,17 +730,19 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="images/photo.jpg" alt="Amit Rangari" class="footer-logo">
+                    <div class="footer-logo">
+                        <span class="mono">$</span> AR
+                    </div>
                     <p class="footer-tagline">Building scalable solutions for tomorrow's challenges</p>
                 </div>
 
                 <div class="footer-links">
                     <div class="footer-col">
-                        <h4>Quick Links</h4>
+                        <h4>Navigate</h4>
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
-                            <li><a href="#expertise">Expertise</a></li>
+                            <li><a href="#expertise">Stack</a></li>
                             <li><a href="#journey">Journey</a></li>
                         </ul>
                     </div>
@@ -806,7 +770,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Amit Rangari. All rights reserved.</p>
-                <p class="footer-credit">Crafted with passion for innovation</p>
+                <p class="footer-credit">Crafted with precision</p>
             </div>
         </div>
     </footer>
